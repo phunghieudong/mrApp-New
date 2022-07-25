@@ -166,10 +166,10 @@ const SignInScreen = (props: SignInProps) => {
             >
               <View style={styles.socialsigninitem}>
                 <Image
-                  source={require("@/assets/icons/zalo.png")}
+                  source={require("@/assets/images/Gmail.png")}
                   style={styles.socialsigninbox}
                 />
-                <Text style={styles.socialsignintext}>Zalo</Text>
+                <Text style={styles.socialsignintext}>Email</Text>
               </View>
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback
@@ -178,13 +178,10 @@ const SignInScreen = (props: SignInProps) => {
               }
             >
               <View style={styles.socialsigninitem}>
-                <View style={styles.socialsigninbox}>
-                  {/* <Icon
-                    type="FontAwesome"
-                    name="facebook"
-                    style={styles.socialsigninicon}
-                  /> */}
-                </View>
+                <Image
+                  source={require("@/assets/images/Face.png")}
+                  style={styles.socialsigninbox}
+                />
                 <Text style={styles.socialsignintext}>Facebook</Text>
               </View>
             </TouchableWithoutFeedback>
@@ -194,18 +191,10 @@ const SignInScreen = (props: SignInProps) => {
               }
             >
               <View style={styles.socialsigninitem}>
-                <View
-                  style={[
-                    styles.socialsigninbox,
-                    { backgroundColor: "#E92928" },
-                  ]}
-                >
-                  <Icon
-                    type="FontAwesome"
-                    name="google"
-                    style={styles.socialsigninicon}
-                  />
-                </View>
+                <Image
+                  source={require("@/assets/images/Google.png")}
+                  style={styles.socialsigninbox}
+                />
                 <Text style={styles.socialsignintext}>Google</Text>
               </View>
             </TouchableWithoutFeedback>
@@ -219,6 +208,60 @@ const SignInScreen = (props: SignInProps) => {
               ĐĂNG KÝ
             </Text>
           </Text>
+        </View>
+        <View style={styles.socialsigninbotton}>
+          <TouchableWithoutFeedback
+            onPress={() =>
+              Toast.show({ text: "Tính năng còn đang phát triển" })
+            }
+          >
+            <View style={styles.socialsigninitem}>
+              <Image
+                source={require("@/assets/images/Inforbotton1.png")}
+                style={styles.socialsigninboxbotton}
+              />
+              <Text style={styles.socialsignintext}>Tin tức</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() =>
+              Toast.show({ text: "Tính năng còn đang phát triển" })
+            }
+          >
+            <View style={styles.socialsigninitem}>
+              <Image
+                source={require("@/assets/images/Inforbotton2.png")}
+                style={styles.socialsigninboxbotton}
+              />
+              <Text style={styles.socialsignintext}>Quy định sử dụng</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() =>
+              Toast.show({ text: "Tính năng còn đang phát triển" })
+            }
+          >
+            <View style={styles.socialsigninitem}>
+              <Image
+                source={require("@/assets/images/Inforbotton3.png")}
+                style={styles.socialsigninboxbotton}
+              />
+              <Text style={styles.socialsignintext}>Hướng dẫn</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() =>
+              Toast.show({ text: "Tính năng còn đang phát triển" })
+            }
+          >
+            <View style={styles.socialsigninitem}>
+              <Image
+                source={require("@/assets/images/Inforbotton4.png")}
+                style={styles.socialsigninboxbotton}
+              />
+              <Text style={styles.socialsignintext}>Liên hệ</Text>
+            </View>
+          </TouchableWithoutFeedback>
         </View>
       </Form>
       {/* <FooterBlock />
@@ -338,16 +381,27 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginTop: 18,
   },
+  socialsigninbotton: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 120,
+  },
   socialsigninitem: {
     alignItems: "center",
   },
   socialsigninbox: {
     width: 34,
     height: 34,
-    borderRadius: 100,
+
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#3B5998",
+  },
+  socialsigninboxbotton: {
+    width: 20,
+    height: 20,
+
+    alignItems: "center",
+    justifyContent: "center",
   },
   socialsigninicon: {
     color: "#fff",

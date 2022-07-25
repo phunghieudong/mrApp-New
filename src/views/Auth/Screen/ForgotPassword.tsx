@@ -218,45 +218,6 @@ const ForgotPasswordScreen: FC<ForgotPasswordProps> = ({ navigation }) => {
         <Form style={styles.frmcontrol}>
           <View style={styles.flex}>
             <Animated.View
-              style={{ transform: [{ translateY: animatedEmail }] }}
-            >
-              {!checkbox.email && (
-                <Icon type="Feather" name="circle" style={styles.chkbox} />
-              )}
-              {checkbox.email && (
-                <Icon
-                  type="Feather"
-                  name="check-circle"
-                  style={[styles.chkbox, { color: orangeColor }]}
-                />
-              )}
-            </Animated.View>
-            <View
-              style={[
-                styles.frmgroup,
-                checkbox.email && { borderColor: mainColor },
-              ]}
-            >
-              <Animated.Text
-                style={[styles.label, { top: animatedLabelEmail }]}
-              >
-                EMAIL
-              </Animated.Text>
-              <Input
-                placeholderTextColor="rgba(0, 0, 0, .5)"
-                style={styles.input}
-                onFocus={() => toggleCheckbox("email")}
-                onChangeText={(value) => setEmail(value)}
-              />
-            </View>
-          </View>
-          <View style={styles.errorbox}>
-            {checkbox.email && errors.email.type.length > 0 && (
-              <Text style={styles.error}>{errors.email.message}</Text>
-            )}
-          </View>
-          <View style={styles.flex}>
-            <Animated.View
               style={{ transform: [{ translateY: animatedPhone }] }}
             >
               {!checkbox.phonenumber && (
@@ -295,6 +256,46 @@ const ForgotPasswordScreen: FC<ForgotPasswordProps> = ({ navigation }) => {
               <Text style={styles.error}>{errors.phonenumber.message}</Text>
             )}
           </View>
+          <View style={styles.flex}>
+            <Animated.View
+              style={{ transform: [{ translateY: animatedEmail }] }}
+            >
+              {!checkbox.email && (
+                <Icon type="Feather" name="circle" style={styles.chkbox} />
+              )}
+              {checkbox.email && (
+                <Icon
+                  type="Feather"
+                  name="check-circle"
+                  style={[styles.chkbox, { color: orangeColor }]}
+                />
+              )}
+            </Animated.View>
+            <View
+              style={[
+                styles.frmgroup,
+                checkbox.email && { borderColor: mainColor },
+              ]}
+            >
+              <Animated.Text
+                style={[styles.label, { top: animatedLabelEmail }]}
+              >
+                EMAIL
+              </Animated.Text>
+              <Input
+                placeholderTextColor="rgba(0, 0, 0, .5)"
+                style={styles.input}
+                onFocus={() => toggleCheckbox("email")}
+                onChangeText={(value) => setEmail(value)}
+              />
+            </View>
+          </View>
+          <View style={styles.errorbox}>
+            {checkbox.email && errors.email.type.length > 0 && (
+              <Text style={styles.error}>{errors.email.message}</Text>
+            )}
+          </View>
+
           <TouchableWithoutFeedback
             onPress={loading ? undefined : handleSubmit}
           >

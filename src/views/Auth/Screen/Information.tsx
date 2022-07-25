@@ -102,7 +102,9 @@ const InformationScreen = (props: InformationProps) => {
           </View>
         </TouchableWithoutFeedback>
       </View>
-      <Text style={styles.register}>Đăng ký LẤY SỐ thứ tự khám bệnh</Text>
+      <Text style={styles.register}>Đăng ký LẤY SỐ </Text>
+      <Text style={styles.register}>thứ tự khám bệnh </Text>
+
       <Text style={styles.where}>Tại các bệnh viện trong và ngoài nước</Text>
       <View style={styles.coop}>
         <Image
@@ -110,23 +112,23 @@ const InformationScreen = (props: InformationProps) => {
           style={styles.coopimg}
         />
         <Image
+          source={require("@/assets/images/hospital-6.png")}
+          style={styles.coopimg}
+        />
+        <Image
+          source={require("@/assets/images/hospital-3.png")}
+          style={styles.coopimg}
+        />
+        <Image
+          source={require("@/assets/images/hospital-6.png")}
+          style={styles.coopimg}
+        />
+        <Image
           source={require("@/assets/images/hospital-3.png")}
           style={styles.coopimg}
         />
         <Image
           source={require("@/assets/images/hospital-1.png")}
-          style={styles.coopimg}
-        />
-        <Image
-          source={require("@/assets/images/hospital-3.png")}
-          style={styles.coopimg}
-        />
-        <Image
-          source={require("@/assets/images/hospital-1.png")}
-          style={styles.coopimg}
-        />
-        <Image
-          source={require("@/assets/images/hospital-3.png")}
           style={styles.coopimg}
         />
       </View>
